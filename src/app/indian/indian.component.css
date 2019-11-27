@@ -1,0 +1,31 @@
+img{
+    border-radius: 100px;
+    
+}
+nav{
+    border-radius: 25px;
+    background: linear-gradient(to right, #008cff88, #00ffaa88);
+}
+.dropdown-menu{
+    background: linear-gradient(to right, #008cff, #00ffaa); 
+}
+#cart{
+    border-radius: 50%;
+    background: linear-gradient(to right, #008cff, #00ffaa); 
+    height:70px;
+    width: 70px;
+}
+.card{
+    border-radius: 15px;
+    width:75%;
+    margin-top: 25px;
+    background: linear-gradient(to right, #008cff, #00ffaa);
+}
+#cart1{
+    border: 3px solid black;
+    border-radius: 50%; 
+    height:70px;
+    width: 70px;
+    opacity: 0.5;
+    margin-top: 10px;
+}

@@ -1,0 +1,107 @@
+<div class="conatiner">
+
+    <div class="col-md-8 col-sm-8 offset-2" id="boxer">
+        <div style="text-align: center">
+            <h1 style="font-family:Sofia;color: aliceblue;font-size:50pt;">Sign Up</h1>
+        </div>
+        <form class="form-inline" id="register" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 col-sm-10">
+
+                <table>
+                    <tr>
+                        <td align="right" style="vertical-align: baseline; ;">Which Account do you want to create?
+                        </td>
+                        <td>
+                            <input type="radio" name="recom" value="Foodie" [(ngModel)]="recom" />
+                            Foodie
+                            <input type="radio" name="recom" value="Cook" [(ngModel)]="recom" />
+                            Cook
+                            <input type="radio" name="recom" value="Caterer" [(ngModel)]="recom" />
+                            Caterer
+                            <input type="radio" name="recom" value="NGO/Charity" [(ngModel)]="recom" />
+                            NGO/Charity
+
+                        </td>
+                    </tr>
+                </table>
+
+                <table *ngIf="recom == 'Cook'">
+                    <tr>
+                        <td align="right">Name:</td>
+                        <td>
+                            <input type="text" class="form-control" style="height:30px" placeholder="Enter your Name"
+                                id="name1" name="name" pattern="^[a-zA-Z]" required [(ngModel)]="cook.cookname"></td>                         
+                    </tr>
+                    <tr>
+                        <td align="right">User Name:</td>
+                        <td><input type="text" class="form-control" style="height:30px"
+                                placeholder="Enter your User Name" id="uname" name="uname" pattern="^[a-zA-Z0-9]+$"
+                                required [(ngModel)]="cook.cookusername"/></td>
+
+                    </tr>
+                    <tr>
+                            <td align="right">Please enter your Unique ID:</td>
+                            <td><input type="text" class="form-control" style="height:30px"
+                                    placeholder="Enter your ID" id="cookid" name="cookid" pattern="^[a-zA-Z0-9]+$"
+                                    required [(ngModel)]="cook.cookid"/></td>
+    
+                        </tr>
+                    <tr>
+                        <td>Password:
+                            <input type="password" class="form-control" style="height:30px" placeholder="Enter password"
+                                id="password" name="pass" pattern="^(?=.*\d).{8,12}$" required /></td>
+                        <td> Confirm Password:
+                            <input type="password" class="form-control" style="height:30px"
+                                placeholder="Re-enter password" id="cpassword" name="cpass" pattern="^(?=.*\d).{8,12}$"
+                                required [(ngModel)]="cook.cookpassword"/></td>
+
+                    </tr>
+                    <tr>
+                        <td align="right">Email:</td>
+                        <td><input type="email" class="form-control" style="height:30px" placeholder="Enter your Email"
+                                id="email1" name="email" [(ngModel)]="cook.cookemail"/></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Phone :</td>
+                        <td><input type="text" class="form-control" style="height:30px" placeholder="Phone" id="phone" [(ngModel)]="cook.cookphone"
+                                name="phone" data-mismatch="Enter valid phone number"
+                                pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" required /></td>
+                    </tr>
+
+                    <tr>
+                        <td style="vertical-align: baseline" align="right">Address Line 1: </td>
+                        <td>
+                            <input type="text" class="form-control" style="height:30px"
+                                placeholder="Enter Address Line 1" id="add1" name="address" [(ngModel)]="cook.cookaddress"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: baseline;" align="right">City
+
+                                <input type="text" class="form-control" style="height:30px"
+                                placeholder="Enter City" id="city" name="city" [(ngModel)]="cook.cookcity"/>
+                        </td>
+                        <td>
+                            Zip Code:
+
+                            <input type="text" class="form-control" style="height:30px" placeholder="Enter Zip Code" name="zip"
+                                id="ZipCode" [(ngModel)]="cook.cookzip"/>
+                        </td>
+                    </tr>
+
+                    <tfoot>
+                        <td colspan="2" align="center">
+                            <button type="submit" class="btn btn-primary">Lets Get
+                                Ordering >>
+                            </button>
+                        </td>
+
+                    </tfoot>
+                </table>
+
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div><br><br>

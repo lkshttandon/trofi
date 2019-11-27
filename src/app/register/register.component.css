@@ -1,0 +1,25 @@
+td {
+    padding: 10px;
+}
+table {
+    width: fit-content;
+}
+body {
+    /* background: url("https://www.foodiesfeed.com/wp-content/uploads/2019/02/messy-pizza-on-a-black-table.jpg"); */
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btn:hover {
+    background-color: #3e8e41
+}
+.btn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#boxer {
+    background: linear-gradient(to right, #008cff88, #00ffaa88);
+    border-radius: 80px;
+    margin-top: 20pt;
+}

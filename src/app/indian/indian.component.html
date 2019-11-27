@@ -1,0 +1,90 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <a class="navbar-brand">
+                <img src="https://raw.githubusercontent.com/ashmita18-dxc/Project/master/output-onlinepngtools.jpg"
+                    width="200" height="200" alt="">
+            </a>
+        </div>
+        <div class="col-md-8">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">About Us</a>
+                        </li>
+                        <div content>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Category
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#" [routerLink]="['/indian']">INDIAN</a>
+                                    <a class="dropdown-item" href="#" [routerLink]="['/chinese']">CHINESE</a>
+                                </div>
+                            </li>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-md-6" *ngFor="let cook of cooks" align="center">
+                    <div class="card">
+                        <img src="http://simpleicon.com/wp-content/uploads/user1.png" class="card-img-top" id="cart1" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{cook.cookname}}</h5>
+                            <p class="card-text">Location: {{cook.cooklocation}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-primary">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="col-md-2">
+            <div class="row">
+                <div class="col-md-6">
+                    <button id="cart">
+                        <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i>
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <a class="nav-link dropdown-toggle" id="cart" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div style="margin-left: 4px;"><i class="fa fa-user" style="font-size:36px;color:white"></i><br>
+                            <div style="color: aliceblue;font-size: 12pt;">user</div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Account</a>
+                        <hr>
+                        <a class="dropdown-item" href="#" [routerLink]="['/login']">Sign out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

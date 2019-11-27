@@ -1,0 +1,82 @@
+<div id="body">
+    <div class="row">
+        <div class="col-md-2">
+           
+                <a class="navbar-brand" href="#">
+                    <img src="https://raw.githubusercontent.com/ashmita18-dxc/Project/master/output-onlinepngtools.jpg" width="200" height="200"
+                    alt="">
+                    </a>
+            
+        </div>
+        <div class="col-md-8">
+            <div class="container" id="container" style="margin-top: 10%;">
+                    <div class="form-container sign-up-container">
+                        <form action="#">
+                            <h1>Sign in <br>
+                                as <br>Meals provider</h1>
+                            <!-- <div class="social-container">
+                                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                                        </div> -->
+                
+                            <input type="email" id=provideremail placeholder="Email" />
+                            <input type="password" id=providerpassword placeholder="Password" />
+                            <table width="100%">
+                                    <tr>
+                                        <td><input type="radio" name="c" value="Caterer" ><h4>Cook</h4></td>
+
+                                        <td> <input type="radio" name="c" value="Cook" ><h4>CATERER</h4></td>
+                                    </tr>
+                            </table>
+                            <a href="#">Forgot your password?</a>
+                            <button [routerLink]="['/homeCook']">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="form-container sign-in-container">
+                        <form action="#">
+                            <h1>Sign in <br>
+                                as <br>Consumer</h1>
+                            <!-- <div class="social-container">
+                                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                                    </div> -->
+                
+                            <input type="email" id=consumeremail placeholder="Email" required />
+                            <input type="password" id=consumerpassword placeholder="Password" pattern="^(?=.*\d).{8,12}$" required />
+                            <table width="100%">
+                                    <tr>
+                                        <td><input type="radio" name="c" value="Caterer" ><h4>User</h4></td>
+
+                                        <td> <input type="radio" name="c" value="Cook" ><h4>NGO</h4></td>
+                                    </tr>
+                            </table>
+                            <a href="#">Forgot your password?</a>
+                            <button type="submit" [routerLink]="['/home']">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <h1>Hello, Friend!</h1>
+                                <p>
+                                    Sign in as Consumer
+                                </p>
+                                <button class="ghost" id="signIn" >Sign In</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <h1>Hello, Friend!</h1>
+                                <p>Sign in as Meals provider</p>
+                                <button class="ghost" id="signUp" >Sign In</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-2" style="margin-top: 5%;">
+            <button [routerLink]="['/register']" class="btn btn-outline-success my-2 my-sm-0" id="signup">Sign Up</button>
+        </div>        
+    </div>
+    </div>
+    

@@ -1,0 +1,28 @@
+img{
+    border-radius: 100px;
+    
+}
+nav{
+    border-radius: 25px;
+    background: linear-gradient(to right, #008cff88, #00ffaa88);
+}
+.dropdown-menu{
+    background: linear-gradient(to right, #008cff, #00ffaa); 
+}
+#cart{
+    border-radius: 50%;
+    background: linear-gradient(to right, #008cff, #00ffaa); 
+    height:70px;
+    width: 70px;
+}
+#cart1{
+    border: 3px solid white;
+    border-radius: 50%; 
+    height:370px;
+    width: 370px;
+}
+#selection{
+    color: cyan;
+    font-family: Sofia;
+    text-align: center;
+}

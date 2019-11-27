@@ -1,0 +1,102 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <a class="navbar-brand">
+        <img src="https://raw.githubusercontent.com/ashmita18-dxc/Project/master/output-onlinepngtools.jpg" width="200"
+          height="200" alt="">
+      </a>
+    </div>
+    <div class="col-md-8">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">About Us</a>
+            </li>
+            <div content>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Category
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#" [routerLink]="['/indian']">INDIAN</a>
+                  <a class="dropdown-item" href="#" [routerLink]="['/chinese']">CHINESE</a>
+                </div>
+              </li>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+      <div id="selection">
+          
+          <div style="border-bottom: 2px solid white;margin-top: 10px;margin-bottom: 50px;">
+              <h1 align="center">Choose your Category</h1>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                  <div align = "center" class="imageholder">
+                      <a href="#" [routerLink]="['/indian']">
+                        <img src="http://www.khaosodenglish.com/wp-content/uploads/2019/08/CIB_1-1068x601.jpg" alt="" id="cart1">
+                        <!-- <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i> -->
+                      </a>
+                      <h1>Indian</h1>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div align = "center" class="imageholder">
+                      <a href="#" [routerLink]="['/chinese']" >
+                        <img src="https://assets3.thrillist.com/v1/image/1864928/size/tl-horizontal_main_2x.jpg" alt="" id="cart1">
+                        <!-- <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i> -->
+                      </a>
+                      <h1>Chinese</h1>
+                  </div>
+              </div>
+            </div>
+          </div>
+          
+         
+      </div>
+      
+    
+
+
+
+    </div>
+    <div class="col-md-2">
+      <div class="row">
+        <div class="col-md-6">
+          <button id="cart">
+            <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i>
+          </button>
+        </div>
+        <div class="col-md-6">
+          <a class="nav-link dropdown-toggle" id="cart" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <div style="margin-left: 4px;"><i class="fa fa-user" style="font-size:36px;color:white"></i><br>
+              <div style="color: aliceblue;font-size: 12pt;">user</div>
+            </div>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Account</a>
+            <hr>
+            <a class="dropdown-item" href="#" [routerLink]="['/login']">Sign out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    
+  </div>
+</div>
