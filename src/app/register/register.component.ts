@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { HttpClientService, Cook } from '../service/http-client.service';
+import { HttpClientService, Cook, Caterer, Foodie } from '../service/http-client.service';
 
 
 @Component({
@@ -12,13 +12,19 @@ import { HttpClientService, Cook } from '../service/http-client.service';
 export class RegisterComponent implements OnInit {
 
   cook: Cook = new Cook("", "", "", "", "", "", "", "","","");
-  foodie: String[]
-  caterer: String[]
+  caterer: Caterer = new Caterer("","","","","","","","","");
+  foodie: Foodie = new Foodie("","","","","","","","")
   ngo: String[]
 
   constructor(private router: Router, private httpClientService: HttpClientService) { }
 
   ngOnInit() {
+  }
+  createCaterer():void{
+    this.httpClientService.createCaterer(this.caterer)
+      .subscribe(data => {
+        alert("Caterer added successfully.");
+      });
   }
   createCook(): void {
     this.httpClientService.createCook(this.cook)
@@ -26,11 +32,16 @@ export class RegisterComponent implements OnInit {
         alert("Cook added successfully.");
       });
   }
-  
+  createFoodie(): void {
+    this.httpClientService.createCook(this.cook)
+      .subscribe(data => {
+        alert("Foodie added successfully.");
+      });
+  }
   onSubmit(form: NgForm) {
 
     if (form.controls['recom'].value == 'Foodie') {
-      
+      this.createFoodie();
       this.router.navigateByUrl('/homeCook');
     }
     else if (form.controls['recom'].value == 'Cook') {
@@ -40,6 +51,8 @@ export class RegisterComponent implements OnInit {
       this.router.navigateByUrl('/homeCook');
     }
     else if (form.controls['recom'].value == 'Caterer') {
+      this.caterer.catererlocation = this.caterer.caterercity
+      this.createCaterer();
       this.router.navigateByUrl('/login');
     }
     else if (form.controls['recom'].value == 'NGO/Charity') {
