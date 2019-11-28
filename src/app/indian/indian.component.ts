@@ -8,20 +8,19 @@ import { HttpClientService } from '../service/http-client.service';
 })
 export class IndianComponent implements OnInit {
 
-  cooks:string[];
+  cooks: string[];
 
-  constructor(private httpClientService:HttpClientService) { 
-    
+  constructor(private httpClientService: HttpClientService) {
+
   }
 
   ngOnInit() {
     this.httpClientService.getCooks().subscribe(
-      response =>this.handleSuccessfulResponse(response),
-     );
+      response => this.handleSuccessfulResponse(response),
+    );
   }
-  handleSuccessfulResponse(response)
-{
-    this.cooks=response;
-}
+  handleSuccessfulResponse(response) {
+    this.cooks = response;
+  }
 
 }

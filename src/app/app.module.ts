@@ -13,6 +13,8 @@ import { IndianComponent } from './indian/indian.component';
 import { ChineseComponent } from './chinese/chinese.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FoodselectComponent } from './foodselect/foodselect.component';
+import { AddCatererComponent } from './add-caterer/add-caterer.component';
+import { AddCookComponent } from './add-cook/add-cook.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FoodselectComponent } from './foodselect/foodselect.component';
     CartComponent,
     IndianComponent,
     ChineseComponent,
-    FoodselectComponent
+    FoodselectComponent,
+    AddCatererComponent,
+    AddCookComponent
   ],
   imports: [
     BrowserModule,

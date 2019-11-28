@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <a class="navbar-brand">
+                <img src="https://raw.githubusercontent.com/ashmita18-dxc/Project/master/output-onlinepngtools.jpg" width="200"
+                    height="200" alt="" >
+            </a>
+        </div>
+        <div class="col-md-8" id="boxer">
+                <div style="text-align: center">
+                    <h1 style="font-family:Sofia;color: aliceblue;font-size:50pt;">Today's Menu: </h1>
+                </div>
+                <form class="form-inline" id="register" (ngSubmit)="updateFood()">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 col-sm-10">
+
+                        <table>
+                            <tr>
+                                <td align="right">Food Item:</td>
+                                <td><input type="text" class="form-control" style="height:30px"
+                                        placeholder="Enter food item" id="foodname" name="foodname" [(ngModel)]="foodselect.foodname"/></td>
+
+                            </tr>
+                            <tr>
+                                <td align="right">Food ID:</td>
+                                <td><input type="text" class="form-control" style="height:30px"
+                                        placeholder="Enter Food ID" id="foodid" name="foodid" [(ngModel)]="foodselect.foodid" /></td>
+
+                            </tr>
+                            <tr>
+                                <td align="right">Quantity: </td>
+                                <td><input type="number" class="form-control" style="height:30px" id="foodquantity" name="foodquantity" [(ngModel)]="foodselect.foodquant"/></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Price:</td>
+                                <td><input type="number" class="form-control"
+                                        id="foodprice" name="foodprice" [(ngModel)]="foodselect.foodprice"></td>
+                            </tr>
+                        
+                           
+                            <tfoot>
+                                <td colspan="2" align="center"><button type="submit" class="btn btn-primary" style="margin-left: 60%;">Enter</button>
+                                </td>
+
+                            </tfoot>
+                        </table>
+
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2">
+                <div style="margin-left: 4px;"><i class="fa fa-user" style="font-size:36px;color:white" id="icon"></i><br>
+                    <div style="color: aliceblue;font-size: 12pt;">{{cook.cookname}}</div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Account</a>
+                    <hr>
+                    <a class="dropdown-item" href="#" [routerLink]="['/login']">Sign out</a>
+                </div>
+            </div>
+</div>

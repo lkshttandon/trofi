@@ -17,8 +17,7 @@
                             Foodie
                             <input type="radio" name="recom" value="Cook" [(ngModel)]="recom" />
                             Cook
-                            <input type="radio" name="recom" value="Caterer" [(ngModel)]="recom" />
-                            Caterer
+                            
                             <input type="radio" name="recom" value="NGO" [(ngModel)]="recom" />
                             NGO
 
@@ -100,74 +99,6 @@
 
                     </tfoot>
                 </table>
-                <table *ngIf="recom == 'Caterer'">
-                    <tr>
-                        <td align="right">Name of Organisation:</td>
-                        <td>
-                            <input type="text" class="form-control" style="height:30px"
-                                placeholder="Enter your Organisation Name" id="caterername" name="cname"
-                                pattern="^[a-zA-Z]" required [(ngModel)]="caterer.caterername"></td>
-                    </tr>
-                    <tr>
-                        <td align="right">Please enter your Unique ID:</td>
-                        <td><input type="text" class="form-control" style="height:30px" placeholder="Enter your ID"
-                                id="catererid" name="cid" pattern="^[a-zA-Z0-9]+$" required
-                                [(ngModel)]="caterer.catererid" /></td>
-
-                    </tr>
-                    <tr>
-                        <td>Password:
-                            <input type="password" class="form-control" style="height:30px" placeholder="Enter password"
-                                id="catererpassword" name="cpass" pattern="^(?=.*\d).{8,12}$" required /></td>
-                        <td> Confirm Password:
-                            <input type="password" class="form-control" style="height:30px"
-                                placeholder="Re-enter password" id="caterercpassword" name="ccpass"
-                                pattern="^(?=.*\d).{8,12}$" required [(ngModel)]="caterer.catererpassword" /></td>
-
-                    </tr>
-                    <tr>
-                        <td align="right">Email:</td>
-                        <td><input type="email" class="form-control" style="height:30px" placeholder="Enter your Email"
-                                id="catereremail1" name="cemail" [(ngModel)]="caterer.catereremail" /></td>
-                    </tr>
-                    <tr>
-                        <td align="right">Phone :</td>
-                        <td><input type="text" class="form-control" style="height:30px" placeholder="Phone"
-                                id="catererphone" [(ngModel)]="caterer.catererphone" name="cphone"
-                                data-mismatch="Enter valid phone number"
-                                pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" required /></td>
-                    </tr>
-
-                    <tr>
-                        <td style="vertical-align: baseline" align="right">Address Line: </td>
-                        <td>
-                            <textarea cols="25" rows="3" class="form-control" placeholder="Enter Address" id="catereradd"
-                                name="caddress" [(ngModel)]="caterer.catereraddress"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="vertical-align: baseline;" align="right">City
-
-                            <input type="text" class="form-control" style="height:30px" placeholder="Enter City"
-                                id="caterercity" name="ccity" [(ngModel)]="caterer.caterercity" />
-                        </td>
-                        <td>
-                            Zip Code:
-
-                            <input type="text" class="form-control" style="height:30px" placeholder="Enter Zip Code"
-                                name="czip" id="catererzip" [(ngModel)]="caterer.catererzip" />
-                        </td>
-                    </tr>
-
-                    <tfoot>
-                        <td colspan="2" align="center">
-                            <button type="submit" class="btn btn-primary">Lets Get
-                                Ordering >>
-                            </button>
-                        </td>
-
-                    </tfoot>
-                </table>
                 <table *ngIf="recom == 'Foodie'">
                     <tr>
                         <td align="right">Name:</td>
@@ -193,7 +124,7 @@
                     <tr>
                         <td align="right">Password:
                             <input type="password" class="form-control" style="height:30px" placeholder="Enter password"
-                                id="foodie.password" pattern="^(?=.*\d).{8,12}$" [(ngModel)]="foodie.pass" required />
+                                id="foodie.password" pattern="^(?=.*\d).{8,12}$" required />
                         </td>
                         <td align="right"> Confirm Password:
                             <input type="password" class="form-control" style="height:30px"
@@ -245,14 +176,89 @@
 
                     <tfoot>
                         <td colspan="2" align="center">
-                            <button type="submit" class="btn btn-primary" [routerLink]="['/home']">Lets Get
+                            <button type="submit" class="btn btn-primary" [routerLink]="['/homecook']">Lets Get
                                 Ordering >>
                             </button>
                         </td>
 
                     </tfoot>
                 </table>
-
+                <table *ngIf="recom == 'NGO'">
+                        <tr>
+                            <td align="right">Name:</td>
+                            <td><input type="text" class="form-control" style="height:30px" placeholder="Enter your Name"
+                                    id="ngo.Name" name="ngo.Name" [(ngModel)]="ngo.orgName"
+                                    pattern="^[a-zA-Z]" required></td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td align="right">Enter the unique Id:</td>
+                            <td><input type="text" class="form-control" style="height:30px"
+                                    placeholder="Enter your unique id" id="ngo.Id" name="ngo.Id"
+                                    [(ngModel)]="ngo.orgId" /></td>
+                        </tr>
+    
+                        <tr>
+                            <td align="right">Email:</td>
+                            <td><input type="email" class="form-control" style="height:30px" placeholder="Enter your Email"
+                                    id="ngo.Email" name="ngo.Email" [(ngModel)]="ngo.orgEmail" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Password:
+                                <input type="password" class="form-control" style="height:30px" placeholder="Enter password"
+                                    id="ngo.password" pattern="^(?=.*\d).{8,12}$" required />
+                            </td>
+                            <td align="right"> Confirm Password:
+                                <input type="password" class="form-control" style="height:30px"
+                                    placeholder="Re-enter password" id="ngo.Password" name="ngo.Password"
+                                    pattern="^(?=.*\d).{8,12}$" [(ngModel)]="ngo.orgPassword" required /></td>
+    
+                        </tr>
+                        <tr>
+                            <td align="right">Phone :</td>
+                            <td><input type="number" class="form-control" style="height:30px" placeholder="Phone"
+                                    id="ngo.Phone" name="ngo.Phone" pattern="/d{10}"
+                                    data-mismatch="Enter valid phone number"
+                                    pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" [(ngModel)]="ngo.orgPhone"
+                                    required /></td>
+                        </tr>
+    
+                        <tr>
+                            <td style="vertical-align: baseline" align="right">Address Line 1: </td>
+                            <td>
+                                <textarea class="form-control" placeholder="Enter Address "
+                                    id="ngo.address" name="ngo.address" [(ngModel)]="ngo.orgAddress" cols="25" rows="3">
+                                        </textarea>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td style="vertical-align: baseline;" align="right">City
+    
+                                <input type="text" class="form-control" id="foodie.foodieCity" style="background-color: white"
+                                    name="ngo.orgCity" [(ngModel)]="ngo.orgCity" placeholder="Enter City" />
+                                    
+                                
+                            </td>
+                            <td>
+                                Zip Code:
+                                <input type="text" class="form-control" style="height: 30px;"
+                                    placeholder="Enter your Zip Code" name="ngo.Zip" id="ngo.Zip"
+                                    [(ngModel)]="ngo.orgZip" />
+                            </td>
+                        </tr>
+    
+                        <tfoot>
+                            <td colspan="2" align="center">
+                                <button type="submit" class="btn btn-primary" >Lets Get
+                                    Ordering >>
+                                </button>
+                            </td>
+    
+                        </tfoot>
+                    </table>
             </div>
         </form>
     </div>

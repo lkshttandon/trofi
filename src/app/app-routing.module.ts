@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { HomeCookComponent } from './home-cook/home-cook.component';
 import { IndianComponent } from './indian/indian.component';
 import { ChineseComponent } from './chinese/chinese.component';
+import { AddCatererComponent } from './add-caterer/add-caterer.component';
+import { AddCookComponent } from './add-cook/add-cook.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'homeCook',component:HomeCookComponent},
   {path:'indian',component:IndianComponent},
-  {path:'chinese',component:ChineseComponent}
+  {path:'chinese',component:ChineseComponent},
+  {path:'add-caterer',component:AddCatererComponent},
+  {path:'homec/:cookname',component:AddCookComponent}
 ];
 
 @NgModule({

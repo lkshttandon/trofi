@@ -25,8 +25,9 @@
                   Category
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#" [routerLink]="['/indian']">INDIAN</a>
-                  <a class="dropdown-item" href="#" [routerLink]="['/chinese']">CHINESE</a>
+                  <a class="dropdown-item" href="#" [routerLink]="['/indian']">BREAKFAST</a>
+                  <a class="dropdown-item" href="#" [routerLink]="['/chinese']">LUNCH</a>
+                  <a class="dropdown-item" href="#" [routerLink]="['/chinese']">DINNER</a>
                 </div>
               </li>
             </div>
@@ -44,31 +45,45 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div align="center" class="imageholder">
-                <a href="#" [routerLink]="['/indian']">
-                  <img src="http://www.khaosodenglish.com/wp-content/uploads/2019/08/CIB_1-1068x601.jpg" alt=""
-                    id="cart1">
-                  <!-- <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i> -->
-                </a>
-                <h1>Indian</h1>
+                <img src="https://www.stlawu.edu/sites/default/files/Culture-Eats-Strategy-For-Breakfast-1.jpg" alt=""
+                  id="breakfast" width="100" height="100">
+                <!-- <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i> -->
+                <input type="radio" ng-model="myVar" value="breakfast">Breakfast
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div align="center" class="imageholder">
-                <a href="#" [routerLink]="['/chinese']">
-                  <img src="https://assets3.thrillist.com/v1/image/1864928/size/tl-horizontal_main_2x.jpg" alt=""
-                    id="cart1">
-                  <!-- <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i> -->
-                </a>
-                <h1>Chinese</h1>
+                <img
+                  src="https://english.manoramaonline.com/content/dam/mm/en/food/special-diet/images/2019/9/22/lunch-box-rice.jpg"
+                  alt="" id="lunch"  width="100" height="100">
+                <!-- <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i> -->
+                <input type="radio" ng-model="myVar" value="lunch">Lunch
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div align="center" class="imageholder">
+                <img
+                  src="https://ob8qxdtnu3-flywheel.netdna-ssl.com/wp-content/uploads/2019/01/Crispy-Cauliflower-Tacos-036.jpg"
+                  alt="" id="dinner"  width="100" height="100">
+                <!-- <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i> -->
+                <input type="radio" ng-model="myVar" value="dinner">Dinner
               </div>
             </div>
           </div>
+          <br><br>
+          <div class="row">
+            <h3 style="margin-left: 45%;">Menu: </h3>
+            <textarea cols="3" rows="3" class="form-control" 
+              placeholder="Enter food items" id="fooditems" name="fooditems" [(ngModel)]="fooditems"></textarea>
+          </div>
+          <br>
+          <div class="row">
+            <button type="submit" style="background-color: #4CAF50; margin-left: 46.5%;" value="submit">Submit</button>
+          </div>
         </div>
-        <div class="row">
-          
-        </div>
+
 
       </div>
 
@@ -79,11 +94,11 @@
     </div>
     <div class="col-md-2">
       <div class="row">
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
           <button id="cart">
             <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i>
           </button>
-        </div>
+        </div> -->
         <div class="col-md-6">
           <a class="nav-link dropdown-toggle" id="cart" role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
