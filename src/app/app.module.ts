@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FoodselectComponent } from './foodselect/foodselect.component';
 import { AddCatererComponent } from './add-caterer/add-caterer.component';
 import { AddCookComponent } from './add-cook/add-cook.component';
+import { UsercartComponent } from './usercart/usercart.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { AddCookComponent } from './add-cook/add-cook.component';
     ChineseComponent,
     FoodselectComponent,
     AddCatererComponent,
-    AddCookComponent
+    AddCookComponent,
+    UsercartComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

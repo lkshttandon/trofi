@@ -37,16 +37,12 @@ export class RegisterComponent implements OnInit {
 
     if (form.controls['recom'].value == 'Foodie') {
       this.createFoodie();
-      this.router.navigateByUrl('/homeCook');
+      this.router.navigateByUrl('/homeCook/' +this.foodie.foodieName);
     }
     else if (form.controls['recom'].value == 'Cook') {
       this.cook.cooklocation = this.cook.cookcity
       this.createCook();
       this.router.navigateByUrl('/homec/' + this.cook.cookname);
-    }
-   
-    else if (form.controls['recom'].value == 'NGO/Charity') {
-      this.router.navigateByUrl('/login');
     }
 
   }

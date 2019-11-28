@@ -45,12 +45,21 @@
                             <h5 class="card-title">{{cook.cookname}}</h5>
                             <p class="card-text">Location: {{cook.cooklocation}}</p>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" *ngFor="let item of cook.cookfoods">{{item.foodname}}</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link btn btn-primary">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                        <table align="center">
+                            <tr align="center">
+                                
+                                <td><b>ITEM</b></td>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                            </tr>
+                            <tr *ngFor="let item of cook.cookfoods" >
+                                <td align="left">{{item.foodname}}</td>
+                                <td align="right">{{item.foodprice}}</td>
+                                <td align="right"><input type="number" style="width:50px;text-align: right;border-radius: 25px;" min="0" max="{{item.foodquant}}"></td>
+                            </tr>
+                        </table>
+                        <div class="card-body" align="center">
+                            <a href="#" class="card-link btn btn-primary">Add to Cart +</a>
                         </div>
                     </div>
                 </div>
@@ -64,7 +73,7 @@
         <div class="col-md-2">
             <div class="row">
                 <div class="col-md-6">
-                    <button id="cart">
+                    <button id="cart"  [routerLink]="['/usercart']">
                         <i class="fa fa-shopping-cart" style="font-size:36px;color:white"></i>
                     </button>
                 </div>
